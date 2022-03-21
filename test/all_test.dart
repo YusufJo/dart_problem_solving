@@ -1,0 +1,43 @@
+import '../ex_1/test/ex_1_tests.dart' as ex1_tests;
+import '../ex_2/test/ex_2_test.dart' as ex2_tests;
+import '../ex_3/test/ex_3_test.dart' as ex3_tests;
+import '../ex_4/test/ex_4_test.dart' as ex4_tests;
+import '../ex_5/test/ex_5_test.dart' as ex5_tests;
+import '../ex_6/test/ex_6_test.dart' as ex6_tests;
+import '../ex_7/test/ex_7_test.dart' as ex7_tests;
+import '../ex_8/test/ex_8_test.dart' as ex8_tests;
+import '../ex_9/test/ex_9_test.dart' as ex9_tests;
+import '../ex_10/test/ex_10_test.dart' as ex10_tests;
+import '../ex_11/test/ex_11_test.dart' as ex11_tests;
+import '../ex_12/test/ex_12_test.dart' as ex12_tests;
+import '../ex_13/test/ex_13_test.dart' as ex13_tests;
+import '../ex_14/test/ex_14_test.dart' as ex14_tests;
+import '../ex_15/test/ex_15_test.dart' as ex15_tests;
+import '../ex_16/test/ex_16_test.dart' as ex16_tests;
+import '../ex_17/test/ex_17_test.dart' as ex17_tests;
+import '../ex_18/test/ex_18_test.dart' as ex18_tests;
+import '../ex_19/test/ex_19_test.dart' as ex19_tests;
+import '../ex_20/test/ex_20_test.dart' as ex20_tests;
+
+void main() {
+  ex1_tests.main();
+  ex2_tests.main();
+  ex3_tests.main();
+  ex4_tests.main();
+  ex5_tests.main();
+  ex6_tests.main();
+  ex7_tests.main();
+  ex8_tests.main();
+  ex9_tests.main();
+  ex10_tests.main();
+  ex11_tests.main();
+  ex12_tests.main();
+  ex13_tests.main();
+  ex14_tests.main();
+  ex15_tests.main();
+  ex16_tests.main();
+  ex17_tests.main();
+  ex18_tests.main();
+  ex19_tests.main();
+  ex20_tests.main();
+}

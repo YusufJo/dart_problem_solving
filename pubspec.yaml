@@ -1,0 +1,48 @@
+name: 'dart_problem_solving'
+description: A set of Dart exercises.
+
+environment:
+  sdk: '>=2.16.0 <3.0.0'
+
+dev_dependencies:
+  ex_1:
+    path: ../dart_problem_solving/ex_1
+  ex_2:
+    path: ../dart_problem_solving/ex_2
+  ex_3:
+    path: ../dart_problem_solving/ex_3
+  ex_4:
+    path: ../dart_problem_solving/ex_4
+  ex_5:
+    path: ../dart_problem_solving/ex_5
+  ex_6:
+    path: ../dart_problem_solving/ex_6
+  ex_7:
+    path: ../dart_problem_solving/ex_7
+  ex_8:
+    path: ../dart_problem_solving/ex_8
+  ex_9:
+    path: ../dart_problem_solving/ex_9
+  ex_10:
+    path: ../dart_problem_solving/ex_10
+  ex_11:
+    path: ../dart_problem_solving/ex_11
+  ex_12:
+    path: ../dart_problem_solving/ex_12
+  ex_13:
+    path: ../dart_problem_solving/ex_13
+  ex_14:
+    path: ../dart_problem_solving/ex_14
+  ex_15:
+    path: ../dart_problem_solving/ex_15
+  ex_16:
+    path: ../dart_problem_solving/ex_16
+  ex_17:
+    path: ../dart_problem_solving/ex_17
+  ex_18:
+    path: ../dart_problem_solving/ex_18
+  ex_19:
+    path: ../dart_problem_solving/ex_19
+  ex_20:
+    path: ../dart_problem_solving/ex_20
+  test: ^1.20.1

@@ -1,0 +1,101 @@
+@startuml
+skinparam linetype polyline
+
+class Resolution {
+    + width: int
+    + height: int
+}
+
+enum OperatingSystem {
+    ANDROID
+    IOS
+    WINDOWS_PHONE
+}
+
+class Contact {
+    + name: String
+    + number: String
+    + email: String
+}
+
+abstract class TelephonyApp {
+    + name: String
+    + contacts: List<Contact>
+
+    + call(number: String)
+    + addContact(contact: Contact)
+    + removeContact(name: String)
+}
+
+TelephonyApp "1" ...up...> "*" Contact
+DefaultTelephonyApp -right-|> TelephonyApp
+GoogleTelephonyApp -right-|> TelephonyApp
+TrueCallerTelephonyApp -right-|> TelephonyApp
+
+abstract class MessagingApp {
+    + name: String
+    + contacts: List<Contact>
+
+    + message(number: String, content: String)
+    + addContact(contact: Contact)
+    + removeContact(name: String)
+}
+
+ MessagingApp "1" ..up.> "*" Contact
+ DefaultMessagingApp -left-|> MessagingApp
+ WhatsappMessagingApp -left-|> MessagingApp
+ MessengerMessagingApp -left-|> MessagingApp
+ IMessageMessagingApp -left-|> MessagingApp
+
+abstract class Mobile {
+    + name: String
+    + modelNumber: String
+    + resolution: Resolution
+    + batteryCapacity: int
+    + operatingSystem: OperatingSystem
+    + contacts: List<Contact>
+    + telephonyApp: TelephonyApp
+    + messagingApp: MessagingApp
+
+    + addContact(contact: Contact)
+    + removeContact(name: String)
+    + call(number: String): void
+    + message(number: String, content: String): void
+    + setTelephonyApp(telephonyApp: TelephonyApp): void
+    + setMessagingApp(messagingApp: MessagingApp): void
+}
+
+SamsungMobile --up--|> Mobile
+AppleMobile --up--|> Mobile
+NokiaMobile --up--|> Mobile
+
+
+Mobile ..up..> Contact
+Mobile "1" ..left..> "1" Resolution
+Mobile "1" ..right..> "1" OperatingSystem
+Mobile "1" ..left..> "1" TelephonyApp
+Mobile "1" ..right..> "1" MessagingApp
+
+enum Vendor {
+    APPLE
+    SAMSUNG
+    NOKIA
+}
+
+abstract class MobileShop {
+    + vendor: Vendor
+    + allMobiles: List<Mobile>
+
+    + buyMobile(modelNumber: String): Mobile
+}
+MobileShop "1"...> "1" Vendor
+MobileShop "1"..up..> "*" Mobile
+MobileShop --up-> Mobile
+SamsungShop --up-|> MobileShop
+SamsungShop --up-> SamsungMobile
+AppleShop --up-|> MobileShop
+AppleShop --up-> AppleMobile
+NokiaShop --up-|> MobileShop
+NokiaShop --up-> NokiaMobile
+
+@enduml
